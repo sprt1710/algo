@@ -1,23 +1,29 @@
 
 
-
 print("food order")
 
-food= input("enter your food type(pitza/burger/sandwich): ")
-quantity= int(input("enter your quantity: "))
+food = input("enter your food type (pitza/burger/sandwich): ")
+quantity = int(input("enter your quantity: "))
 
-pitza= 250000
-burger= 180000
-sandwich= 120000
+pitza = 250000
+burger = 180000
+sandwich = 120000
 
+if food == "pitza":
+    total = pitza * quantity
 
-total= food * quantity
+elif food == "burger":
+    total = burger * quantity
 
-if   food == pitza or food==burger or food==sandwich:
-    print("your cost",total )
+elif food == "sandwich":
+    total = sandwich * quantity
 
 else:
-    print("we havent this food")
+    print("we haven't this food")
+    total = 0
 
-if  total > 500000:
-    print("drink is free")
+if total > 0:
+    print("your cost:", total)
+
+    if total > 500000:
+        print("drink is free")
