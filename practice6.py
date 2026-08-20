@@ -8,19 +8,20 @@ shiping_type=input("shiping_type(standard/express):  ")
 
 standard = 50000 
 express = 100000 
+if   shiping_type =="standard":
+    shipping_cost = standard
 
+elif shiping_type == "express":
+    shipping_cost = express
 
-if    purchase_amount > 2000000 and shiping_type==standard/express:
-    cost= purchase_amount = shiping_type
-    print( "your total is" ,cost, )
-
-elif    purchase_amount <= 2000000 and shiping_type==standard/express:
-    cost= purchase_amount+shiping_type
-    print("your total is" ,cost,  )
-
-
-elif    shiping_type != standard or express:
+else:
     print("invalid shiping_type")
 
-else :
-    print("good bye")
+if    purchase_amount > 2000000 :
+    shipping_cost = 0
+
+elif    purchase_amount <= 2000000 :
+    cost= purchase_amount+shipping_cost
+
+    print("your total is" ,cost  )
+
